@@ -430,6 +430,7 @@ div.wf3 {
 div.moodboardContainer {
   background: #FFF;
   height: 200vh;
+  width: 100vw;
   padding: 5%;
 
   display: grid;
