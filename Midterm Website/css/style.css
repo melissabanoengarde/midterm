@@ -1,0 +1,487 @@
+/*Press Start 2P*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/*Inconsolata*/
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Intro Page ======================================== */
+body {
+  /* background: black; */
+}
+
+video#bgGif {
+  position: fixed;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -1;
+  background: black;
+}
+
+div.introText {
+  padding-top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding-bottom: 2%;
+
+  line-height: 30px;
+  color: #FFF;
+}
+
+h1 {
+  margin: 0 auto;
+  max-width: 580px;
+  text-align: center;
+
+  font-family: 'Press Start 2P', monospace, courier, sans-serif;
+  font-size: 35px;
+  line-height: 50px;
+  padding-bottom: 1.5%;
+}
+
+h2 {
+  font-family: 'Inconsolata', monospace, courier, sans-serif;
+  font-weight: normal;
+  line-height: 35px;
+}
+
+a.button {
+ display: inline-block;
+ margin: 80% 46% 0% 46%;
+ padding: 0.5% 4%;
+ font-family:'Inconsolata', monospace, courier, sans-serif;
+ font-size: 24px;
+ color:#FFFFFF;
+ background-color:#FFFFFF;
+ text-align: center;
+ border: 2px solid white;
+}
+
+a.button:hover{
+ background-color:#FFF;
+}
+
+a:link {
+  color: #FFF;
+}
+
+a:visited {
+ color: #FFF;
+ transition: all 0.2s;
+}
+
+a:hover {
+  color: #FFF;
+}
+
+a:active {
+ color: #FFF;
+}
+
+
+
+/* ===== essay.html ======================================== */
+
+header {
+  /* border: 1px solid #000; */
+  flex-grow: 1;
+  padding-left: 0.5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 45%;
+
+  font-family: 'Inconsolata', monospace, courier, sans-serif;
+  font-size: 30px;
+  color: #000;
+
+}
+
+nav {
+  /* border: 1px solid #000; */
+  padding-right: 0.5%;
+  padding-top: 0.1%;
+  position:fixed;
+  top: 0;
+  right: 0;
+  width: 45%;
+
+  text-align: right;
+  font-family: 'Inconsolata', monospace, courier, sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+nav a:link {
+  flex-grow: 1;
+  transition: all 0.3s;
+  text-decoration: none;
+  color: #000;
+}
+
+nav a:visited {
+  color: #000;
+}
+
+nav a.active {
+  color: blue;
+}
+
+/* underline effect */
+nav a.right {
+  position: relative; /* underlines individually */
+}
+
+a.right:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+  background-color: blue;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+a.right:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+/* underline effect */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.essayContainer {
+  background: #FFF;
+  /* height: 100%; */
+  padding: 5% 2% 0% 2%;
+
+}
+
+/* GRID ESSAY */
+article.essay {
+  font-family: 'Inconsolata', monospace, courier, sans-serif;
+  text-align: justify;
+  line-height: 30px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr;
+  grid-gap: 2rem;
+  justify-content: center;
+}
+
+article.p1 {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+
+article.p1 h2 {
+  padding-bottom: 2%;
+}
+
+p.p2 {
+  grid-column: 3/5;
+  grid-row: 2/4;
+}
+
+img.skinnerbox {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  width: 100%;
+  align-self: center;
+}
+
+p.p3 {
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
+
+img.eq {
+  grid-column: 3/5;
+  grid-row: 3/4;
+  width: 100%;
+  align-self: center;
+}
+
+p.p4 {
+  grid-column: 3/5;
+  grid-row: 4/5;
+}
+
+img.ffxiv {
+  grid-column: 1/3;
+  grid-row: 4/5;
+  width: 100%;
+  align-self: center;
+}
+
+p.p5 {
+  /* grid-area: p5; */
+  grid-column: 1/3;
+  grid-row: 5/6;
+}
+
+img.league {
+  grid-column: 3/5;
+  grid-row: 5/6;
+  width: 100%;
+  align-self: center;
+}
+
+ol.ref {
+/* line-height: 20px; */
+  grid-column: 1/3;
+  grid-row: 6/7;
+
+  padding-top: 10%;
+}
+
+a.pdfv:link {
+  color: black;
+  font-style: italic;
+}
+
+a.pdfv:visited {
+  color: black;
+}
+
+a.pdfv:hover {
+  color: black;
+}
+
+a.pdfv:active {
+  color: black;
+}
+
+
+
+
+
+
+/* ===== wireframes.html ======================================== */
+
+.wireframesContainer {
+  background: #FFF;
+  height: 50vh;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+div.wf1 {
+  background-image: url("../assets/images/wireframes1.jpg");
+  height: 90%;
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+div.wf2 {
+  content: url("../assets/images/wireframes2.jpg");
+  max-width: 100%;
+  float: left;
+  background: transparent;
+}
+
+div.wf3 {
+  content: url("../assets/images/wireframes3.jpg");
+  max-width: 100%;
+  float: right;
+}
+
+
+
+/* ===== mockups.html ======================================== */
+
+.mockupsContainer {
+  background: #FFF;
+  height: 200vh;
+  padding: 5%;
+
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr;
+  grid-gap: 1em;
+  justify-content: center;
+}
+
+.landingPage {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  width: 100%;
+
+  display: block;
+  flex-grow: 2;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  align-self: center;
+
+  padding-bottom: 2%;
+  background: white;
+  transition: all 1s;
+
+  box-shadow: 2px 2px 4px #000000;
+}
+
+.landingPage:hover {
+  width: 120%;
+  height: 110%;
+  transition: all .3s;
+}
+
+.landingpage_title {
+  font-family: 'Inconsolata', monospace, courier, sans-serif;
+  grid-row: 1/2;
+  grid-column: 3/4;
+  align-self: center;
+  text-align: center;
+  font-size: 50px;
+}
+
+.scrolled {
+  grid-row: 2/3;
+  grid-column: 3/4;
+
+  display: block;
+  flex-grow: 2;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  align-self: center;
+
+  padding-bottom: 2%;
+  background: white;
+  transition: all 1s;
+
+  box-shadow: 2px 2px 4px #000000;
+}
+
+.scrolled:hover {
+  width: 120%;
+  height: 110%;
+  transition: all .3s;
+}
+
+.scrolledLandingpage_title {
+  font-family: 'Inconsolata', monospace, courier, sans-serif;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  align-self: center;
+  text-align: center;
+  font-size: 50px;
+}
+
+.form {
+  grid-row: 3/4;
+  grid-column: 2/3;
+
+  display: block;
+  flex-grow: 2;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  align-self: center;
+
+  padding-bottom: 2%;
+  background: white;
+  transition: all 1s;
+
+  box-shadow: 2px 2px 4px #000000;
+}
+
+.form:hover {
+  width: 120%;
+  height: 110%;
+  transition: all .3s;
+}
+
+.form_title {
+  font-family: 'Inconsolata', monospace, courier, sans-serif;
+  grid-row: 3/4;
+  grid-column: 3/4;
+  align-self: center;
+  text-align: center;
+  font-size: 50px;
+}
+
+/* ===== moodboard.html ======================================== */
+
+div.moodboardContainer {
+  background: #FFF;
+  height: 200vh;
+  padding: 5%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr ;
+  grid-gap: 1em;
+  grid-row-gap: 2em;
+  justify-content: center;
+  font-family: 'Inconsolata', monospace, courier, sans-serif;
+
+  transition: all 0.3s;
+}
+
+img.greencolorway {
+  grid-row: 1;
+  grid-column: 1/2;
+  align-items: center;
+    transition: all 0.3s;
+}
+
+img.darkgrey {
+  grid-row: 1/2;
+  grid-column: 4/5;
+  align-self: center;
+}
+
+img.regFont {
+  grid-row: 1/2;
+  grid-column: 3/4;
+  align-self: center;
+}
+
+img.fontBold {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  align-self: center;
+}
+
+img.afilasi {
+  grid-row: 2/5;
+  grid-column: 1/3;
+  align-self: center;
+}
+
+img.chime {
+  grid-row: 2/3;
+  grid-column: 3/5;
+  align-self: center;
+}
+
+img.chimescroll {
+  grid-row: 3/4;
+  grid-column: 3/5;
+  align-self: center;
+}
